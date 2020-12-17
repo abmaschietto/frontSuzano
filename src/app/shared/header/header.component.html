@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-light mb-3">
+  <a class="navbar-brand" >
+    <img class="logo" src="assets/image/logo-tdv.png" alt="logo-dellavolpe">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navDellaVolpe" aria-controls="navDellaVolpe" aria-expanded="true" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navDellaVolpe">
+    <ul class="navbar-nav pad">
+        <li class="nav-item active" >
+          <a class="nav-link" [routerLink]="['consulta']">
+            <div class="content">
+              <span class="nav-text posicao" size-directive>Consulta Nfe <fa-icon [icon]='search'></fa-icon></span>
+            </div>
+          </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="['cadastro']">
+                <span class="nav-text posicao" size-directive>Cadastro Nfe <fa-icon [icon]='plus'></fa-icon></span>
+            </a>
+        </li>
+    </ul>
+  </div>
+</nav>

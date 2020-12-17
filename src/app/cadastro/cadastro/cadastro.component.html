@@ -1,0 +1,21 @@
+<div class="container pt-3">
+  <form [formGroup]='formCadastro'>
+    <div class="form-row">
+      <div class="form-group col-md-12 ">
+        <label for="consultar">Cadastrar Notas</label>
+        <textarea class="form-control textarea" id="consultar"
+         placeholder="Insira notas para cadastro" formControlName='notas'> </textarea>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <button type="submit" class="btn col-md-4 botao" (click)="send()" color-directive>
+
+        <p class="texto-botao">Enviar <fa-icon [icon]='aviaoIcone'></fa-icon></p>
+      </button>
+  </div>
+  </form>
+
+
+  <app-snackbar></app-snackbar>
+
+</div>

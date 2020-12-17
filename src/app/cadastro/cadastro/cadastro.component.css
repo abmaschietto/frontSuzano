@@ -1,0 +1,21 @@
+label{
+  font-weight: bold;
+}
+
+.textarea{
+  height: 150px;
+}
+
+.botao{
+  height: 50px;
+  background-color: #FD7543;
+  border-style: none;
+  border-radius: 8px;
+
+}
+
+.texto-botao{
+  font-weight: bolder;
+  padding-top: 5px;
+  color: azure;
+}
