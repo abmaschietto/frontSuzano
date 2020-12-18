@@ -5,6 +5,8 @@ import { HeaderComponent } from './header/header.component';
 import { SnackbarComponent } from './snackbar/snackbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from '../app-routing.module';
+import { SizeDirective } from '../directives/size.directive';
+import { DirectivesModule } from '../directives/directives.module';
 
 
 
@@ -13,7 +15,8 @@ import { AppRoutingModule } from '../app-routing.module';
   imports: [
     CommonModule,
     FontAwesomeModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DirectivesModule
   ],
   exports:[FooterComponent, HeaderComponent, SnackbarComponent]
 })

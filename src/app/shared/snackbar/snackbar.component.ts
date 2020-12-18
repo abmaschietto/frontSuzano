@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { animate, state, style, transition, trigger } from '@angular/animations'
 import { NotificationService } from 'src/app/services/notification.service';
-import { Observable } from 'rxjs/internal/Observable';
+import { faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import { timer } from 'rxjs';
 
 @Component({
@@ -26,7 +26,7 @@ import { timer } from 'rxjs';
 export class SnackbarComponent implements OnInit {
 
   public response:string;
-
+  public check =  faCheckCircle;
   public snackVisbility:string = "hidden";
 
   constructor(private notification: NotificationService) { }

@@ -19,6 +19,16 @@
                 <span class="nav-text posicao" size-directive>Cadastro Nfe <fa-icon [icon]='plus'></fa-icon></span>
             </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="logged()">
+              <span class="nav-text posicao user">Bem vindo  {{logged()}} <fa-icon [icon]='user'></fa-icon></span>
+          </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" *ngIf="logged()" (click)='out()'>
+            <button class="btn nav-text posicao signout" size-directive>sair <fa-icon [icon]='signout'></fa-icon></button>
+        </a>
+    </li>
     </ul>
   </div>
 </nav>

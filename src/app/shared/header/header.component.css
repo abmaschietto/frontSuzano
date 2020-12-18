@@ -44,6 +44,18 @@ span{
   position: fixed;
  }
 
+ .user{
+ float: right;
+ margin-left: 600px;
+ }
+
+ .signout{
+  float: right;
+  margin-left: 750px;
+  color: aliceblue;
+  margin-top: -6px;
+  }
+
  .content{
   margin-right: 120px;
  }

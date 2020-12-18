@@ -27,7 +27,7 @@ export class CadastroComponent implements OnInit {
   send(){
     // MOCKAP ATÉ A API ESTAR PRONTA
     console.log(this.formCadastro.value);
-    this.notification.notify('Conteúdo gravado!')
+    this.notification.notify(`Conteúdo gravado `)
 
   }
 

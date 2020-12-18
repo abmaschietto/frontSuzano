@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { faSearchPlus, faPlus} from "@fortawesome/free-solid-svg-icons"
+import { Router } from '@angular/router';
+import { faSearchPlus, faPlus, faUser, faSignOutAlt} from "@fortawesome/free-solid-svg-icons"
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +10,28 @@ import { faSearchPlus, faPlus} from "@fortawesome/free-solid-svg-icons"
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private login: LoginService,
+              private router: Router) { }
 
+  // icons font awesome
   search =  faSearchPlus;
   plus =  faPlus
-
-  switch:boolean = false;
+  user = faUser
+  signout = faSignOutAlt;
 
   ngOnInit() {
-  }}
+  }
+
+  logged():string{
+   return this.login.getUser();
+  }
+
+  out(){
+    this.login.logout();
+    this.router.navigate(['']);
+  }
+
+}
+
+
+

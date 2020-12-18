@@ -1,14 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotificationService } from './notification.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginService } from './login.service';
 
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
-  providers:[NotificationService]
+  providers:[NotificationService, LoginService]
 })
 export class ServicesModule { }
