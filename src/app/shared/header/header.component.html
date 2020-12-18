@@ -6,7 +6,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navDellaVolpe">
-    <ul class="navbar-nav pad">
+    <ul class="navbar-nav pad" *ngIf="logged()">
         <li class="nav-item active" >
           <a class="nav-link" [routerLink]="['consulta']">
             <div class="content">
@@ -20,12 +20,12 @@
             </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" *ngIf="logged()">
+          <a class="nav-link">
               <span class="nav-text posicao user">Bem vindo  {{logged()}} <fa-icon [icon]='user'></fa-icon></span>
           </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" *ngIf="logged()" (click)='out()'>
+        <a class="nav-link" (click)='out()'>
             <button class="btn nav-text posicao signout" size-directive>sair <fa-icon [icon]='signout'></fa-icon></button>
         </a>
     </li>
