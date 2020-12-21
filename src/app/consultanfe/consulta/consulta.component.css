@@ -1,3 +1,26 @@
 label{
   font-weight: bold;
 }
+
+.botao{
+  height: 50px;
+  background-color: #FD7543;
+  border-style: none;
+  border-radius: 8px;
+}
+
+.text-botao{
+  font-weight: bolder;
+  padding-top: 5px;
+  color: azure;
+}
+
+
+.head{
+  background-color: #FD7543;
+  font-size: small;
+}
+
+.body-table{
+  font-size: small;
+}

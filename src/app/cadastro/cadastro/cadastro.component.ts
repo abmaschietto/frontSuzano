@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { NotificationService } from 'src/app/services/notification.service';
 
+
 @Component({
   selector: 'app-cadastro',
   templateUrl: './cadastro.component.html',
@@ -27,7 +28,7 @@ export class CadastroComponent implements OnInit {
   send(){
     // MOCKAP ATÉ A API ESTAR PRONTA
     console.log(this.formCadastro.value);
-    this.notification.notify(`Conteúdo gravado `)
+    this.notification.notify(`Conteúdo gravado`)
 
   }
 

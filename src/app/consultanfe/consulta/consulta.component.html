@@ -27,15 +27,16 @@
       </div>
     </div>
     <!-- <button type="submit" class="btn btn-primary">Sign in</button> -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="send()">
-      Launch demo modal
+    <button type="button" class="btn btn-primary col-md-3 botao" data-toggle="modal" data-target="#exampleModal"
+     (click)="send()" color-directive>
+      <p class="text-botao">Consultar  <fa-icon [icon]='prancha'></fa-icon></p>
     </button>
   </form>
 </div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel">Dados NFE</h5>
@@ -44,7 +45,38 @@
         </button>
       </div>
       <div class="modal-body">
-
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" class="head">Chave Nfe</th>
+              <th scope="col" class="head">Cnpj remetente</th>
+              <th scope="col" class="head">Razão social</th>
+              <th scope="col" class="head">Série</th>
+              <th scope="col" class="head">Nº Nota</th>
+              <th scope="col" class="head">Armazém</th>
+              <th scope="col" class="head">Cnpj Destinatário</th>
+              <th scope="col" class="head">Data Priorização</th>
+              <th scope="col" class="head">Solicitante</th>
+              <th scope="col" class="head">Usuário</th>
+              <th scope="col" class="head">Obs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="body-table">{{notaNfe?.chaveNfe}}</td>
+              <td class="body-table">{{notaNfe?.cnpjRemetente}}</td>
+              <td class="body-table">{{notaNfe?.razaoSocial}}</td>
+              <td class="body-table">{{notaNfe?.serie}}</td>
+              <td class="body-table">{{notaNfe?.numeroNota}}</td>
+              <td class="body-table">{{notaNfe?.armazem}}</td>
+              <td class="body-table">{{notaNfe?.cnpjDestinatario}}</td>
+              <td class="body-table">{{notaNfe?.dataPriorizacao}}</td>
+              <td class="body-table">{{notaNfe?.solicitante}}</td>
+              <td class="body-table">{{notaNfe?.usuario}}</td>
+              <td class="body-table">{{notaNfe?.obs}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
