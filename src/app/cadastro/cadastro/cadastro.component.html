@@ -2,9 +2,13 @@
   <form [formGroup]='formCadastro'>
     <div class="form-row">
       <div class="form-group col-md-12 ">
-        <label for="consultar">Cadastrar Notas</label>
+        <label for="consultar">Cadastrar Notas
+          <button type="button" class="btn p-0 m-0" data-toggle="modal" data-target="#modalCadastro">
+            <fa-icon [icon]="questao" size='xl'></fa-icon>
+          </button>
+        </label>
         <textarea class="form-control textarea" id="consultar"
-         placeholder="Insira notas para cadastro" formControlName='notas'> </textarea>
+         placeholder="Insira notas para cadastro, após cada nota insira ;  Em dúvida clique no botão de ajuda" formControlName='notas'> </textarea>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -15,6 +19,30 @@
   </div>
   </form>
 
+  <!-- Modal -->
+<div class="modal fade" id="modalCadastro" tabindex="-1" aria-labelledby="modalCadastro" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Como cadastrar notas</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <p>Após cada nota inserida no campo de texto <span class="enfase">insira um ponto e vírgula para separá-las</span>, ex:</p>
+          <p>
+            31140202167325000199550000000948031039410366;
+            31140202167322000199550000000948331039410526;
+            45640202167325000199550000000948031039412310;
+          </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar a tela de cadastro</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <app-snackbar></app-snackbar>
 

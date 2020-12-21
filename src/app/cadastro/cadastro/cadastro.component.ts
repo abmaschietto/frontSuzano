@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { faPaperPlane, faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
 import { NotificationService } from 'src/app/services/notification.service';
 
 
@@ -12,6 +12,7 @@ import { NotificationService } from 'src/app/services/notification.service';
 export class CadastroComponent implements OnInit {
 
   public aviaoIcone = faPaperPlane;
+  public questao = faQuestionCircle;
   public formCadastro: FormGroup;
   public toggler:string = 'hidden';
 
